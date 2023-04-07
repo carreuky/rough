@@ -9,6 +9,10 @@
   text-decoration: none;
   transform: 0.2s linear;
 }
+html,
+body {
+  height: 100%;
+}
 .top-banner {
   background-image: url("./assest/smiles.jpg");
   text-align: center;
@@ -23,7 +27,7 @@
 }
 .caption {
   padding: 5px;
-  color: orangered;
+  color: purple;
   font-weight: bolder;
 }
 .header {
@@ -53,6 +57,51 @@
   border-bottom: 0.1rem solid #d3ad7f;
   padding-bottom: 0.5rem;
 }
+
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  color: #e8e925;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: red;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: black;
+  color: #e8e925;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -68,19 +117,19 @@
   text-align: center;
   height: 500px;
 }
-.content{
-    padding-top: 50px;
-    width: 75%;
+.content {
+  padding-top: 50px;
+  width: 75%;
 }
 .home .content h3 {
   font-size: 2rem;
   text-transform: uppercase;
 }
 .home .content h4 {
-    padding: 13px;
-    font-size: 1rem;
-    text-transform: uppercase;
-  }
+  padding: 13px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
 
 .home .content p {
   font-size: 1.5rem;
@@ -101,33 +150,263 @@
 .btn:hover {
   letter-spacing: 0.2rem;
 }
-.footer{
-    display: flex;
-    background: black;
-    text-align: center;
-    justify-content: center
-
+.footer {
+  display: flex;
+  background: black;
+  text-align: center;
+  justify-content: center;
 }
 
-
-.footer .share a{
-    height: 3rem;
-    width: 3rem;
-    line-height: 3rem;
-    color: #fff;
-    border: 0.1rem solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
+.footer .share a {
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  color: #fff;
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
 }
 .footer div {
-    width: 33.3%;   
-    color: white; 
-    padding: 1rem 0;
-
-  }
-
-.footer .share a:hover{
-    background: #d3ad7f;
+  width: 33.3%;
+  color: white;
+  padding: 1rem 0;
 }
-.copy-right{
-    text-align: center;
+
+.footer .share a:hover {
+  background: #d3ad7f;
+}
+.copy-right {
+  text-align: center;
+}
+
+/* About */
+.know,
+.activities {
+  text-align: center;
+  margin: 30px;
+}
+span {
+  font-weight: bold;
+  color: black;
+}
+.know > p,
+.activities > p {
+  padding: 20px;
+}
+/* contact */
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  background: #3e3e3e;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #999;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #ea1d6f;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: white;
+}
+
+.app-contact {
+  margin-top: auto;
+  font-size: 8px;
+  color: #888;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: #666;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app-form-button:hover {
+  color: #b9134f;
+}
+
+.credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #ffa4bd;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.credits-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dribbble {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+.events{
+  text-align: center;
+  width:fit-content;
+  margin: 50px;
+}
+.events img{
+  height: 300px;
+}
+.events p, .events h1{
+  padding: 20px;
+}
+.donate{
+  text-align: center;
+}
+.d-header {
+  font-size: 50px;
+}
+.pd{
+  padding: 20px;
+  font-weight: lighter;
+  font-size: 30px;
+
 }
